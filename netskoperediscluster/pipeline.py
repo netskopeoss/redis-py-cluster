@@ -3,7 +3,7 @@
 # python std lib
 import sys
 
-# rediscluster imports
+# netskoperediscluster imports
 from .client import RedisCluster
 from .exceptions import (
     RedisClusterException, AskError, MovedError, TryAgainError, ClusterDownError,

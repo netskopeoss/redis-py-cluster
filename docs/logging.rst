@@ -7,10 +7,10 @@ To setup logging for debugging inside the client during development you can add 
 
 	import logging
 
-	from rediscluster import RedisCluster
+	from netskoperediscluster import RedisCluster
 
 	logging.basicConfig()
-	logger = logging.getLogger('rediscluster')
+	logger = logging.getLogger('netskoperediscluster')
 	logger.setLevel(logging.DEBUG)
 	logger.propagate = True
 

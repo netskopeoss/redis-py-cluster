@@ -3,11 +3,11 @@
 # python std lib
 from __future__ import with_statement
 
-# rediscluster imports
-from rediscluster.exceptions import (
+# netskoperediscluster imports
+from netskoperediscluster.exceptions import (
     RedisClusterException, ClusterDownError
 )
-from rediscluster.utils import (
+from netskoperediscluster.utils import (
     string_keys_to_dict,
     dict_merge,
     blocked_command,

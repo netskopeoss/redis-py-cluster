@@ -10,7 +10,7 @@ from contextlib import contextmanager
 from itertools import chain
 from collections import defaultdict
 
-# rediscluster imports
+# netskoperediscluster imports
 from .nodemanager import NodeManager
 from .exceptions import (
     RedisClusterException, AskError, MovedError,
@@ -106,7 +106,7 @@ class SSLClusterConnection(SSLConnection):
 
 class ClusterConnectionPool(ConnectionPool):
     """
-    Custom connection pool for rediscluster
+    Custom connection pool for netskoperediscluster
     """
     RedisClusterDefaultTimeout = None
 
@@ -368,18 +368,18 @@ class ClusterBlockingConnectionPool(ClusterConnectionPool):
     """
     Thread-safe blocking connection pool for Redis Cluster::
 
-        >>> from rediscluster.client import RedisCluster
+        >>> from netskoperediscluster.client import RedisCluster
         >>> client = RedisCluster(connection_pool=ClusterBlockingConnectionPool())
 
     It performs the same function as the default
-    ``:py:class: ~rediscluster.connection.ClusterConnectionPool`` implementation, in that,
+    ``:py:class: ~netskoperediscluster.connection.ClusterConnectionPool`` implementation, in that,
     it maintains a pool of reusable connections to a redis cluster that can be shared by
     multiple redis clients (safely across threads if required).
 
     The difference is that, in the event that a client tries to get a
     connection from the pool when all of connections are in use, rather than
-    raising a ``:py:class: ~rediscluster.exceptions.RedisClusterException`` (as the default
-    ``:py:class: ~rediscluster.connection.ClusterConnectionPool`` implementation does), it
+    raising a ``:py:class: ~netskoperediscluster.exceptions.RedisClusterException`` (as the default
+    ``:py:class: ~netskoperediscluster.connection.ClusterConnectionPool`` implementation does), it
     makes the client wait ("blocks") for a specified number of seconds until
     a connection becomes available.
 
@@ -541,7 +541,7 @@ class ClusterBlockingConnectionPool(ClusterConnectionPool):
 
 class ClusterReadOnlyConnectionPool(ClusterConnectionPool):
     """
-    Readonly connection pool for rediscluster
+    Readonly connection pool for netskoperediscluster
     """
 
     def __init__(self, startup_nodes=None, init_slot_cache=True, connection_class=None,
@@ -602,7 +602,7 @@ class ClusterReadOnlyConnectionPool(ClusterConnectionPool):
 
 class ClusterWithReadReplicasConnectionPool(ClusterConnectionPool):
     """
-    Custom connection pool for rediscluster with load balancing across read replicas
+    Custom connection pool for netskoperediscluster with load balancing across read replicas
     """
 
     def get_node_by_slot(self, slot, read_command=False):

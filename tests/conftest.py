@@ -5,8 +5,8 @@ import os
 import sys
 import json
 
-# rediscluster imports
-from rediscluster import RedisCluster
+# netskoperediscluster imports
+from netskoperediscluster import RedisCluster
 
 # 3rd party imports
 import pytest

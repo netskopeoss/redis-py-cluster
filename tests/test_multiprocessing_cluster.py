@@ -2,8 +2,8 @@ import pytest
 import multiprocessing
 import contextlib
 
-import rediscluster
-from rediscluster.connection import ClusterConnection, ClusterConnectionPool
+import netskoperediscluster
+from netskoperediscluster.connection import ClusterConnection, ClusterConnectionPool
 from redis.exceptions import ConnectionError
 
 from .conftest import _get_client
@@ -30,7 +30,7 @@ class TestMultiprocessing(object):
     @pytest.fixture()
     def r(self, request):
         return _get_client(
-            rediscluster.RedisCluster,
+            netskoperediscluster.RedisCluster,
             request=request,
             single_connection_client=False)
 

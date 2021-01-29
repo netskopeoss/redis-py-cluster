@@ -1,7 +1,7 @@
 import random
 import string
 import sys
-from rediscluster import RedisCluster
+from netskoperediscluster import RedisCluster
 
 startup_nodes = [{"host": "127.0.0.1", "port": "7000"}]
 

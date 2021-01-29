@@ -4,10 +4,10 @@
 from __future__ import unicode_literals
 import re
 
-# rediscluster imports
-from rediscluster.client import RedisCluster
-from rediscluster.connection import ClusterConnectionPool, ClusterReadOnlyConnectionPool
-from rediscluster.exceptions import RedisClusterException
+# netskoperediscluster imports
+from netskoperediscluster.client import RedisCluster
+from netskoperediscluster.connection import ClusterConnectionPool, ClusterReadOnlyConnectionPool
+from netskoperediscluster.exceptions import RedisClusterException
 from tests.conftest import _get_client, skip_if_server_version_lt
 
 # 3rd party imports

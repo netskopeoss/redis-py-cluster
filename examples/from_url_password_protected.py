@@ -1,4 +1,4 @@
-from rediscluster import RedisCluster
+from netskoperediscluster import RedisCluster
 
 url="redis://:R1NFTBWTE1@10.127.91.90:6572/0"
 

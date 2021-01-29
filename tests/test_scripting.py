@@ -3,8 +3,8 @@
 # python std lib
 from __future__ import unicode_literals
 
-# rediscluster imports
-from rediscluster.exceptions import RedisClusterException
+# netskoperediscluster imports
+from netskoperediscluster.exceptions import RedisClusterException
 
 # 3rd party imports
 from redis import exceptions

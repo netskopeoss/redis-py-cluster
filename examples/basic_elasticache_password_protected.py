@@ -1,4 +1,4 @@
-from rediscluster import RedisCluster
+from netskoperediscluster import RedisCluster
 
 rc = RedisCluster(
     host='clustercfg.cfg-endpoint-name.aq25ta.euw1.cache.amazonaws.com',

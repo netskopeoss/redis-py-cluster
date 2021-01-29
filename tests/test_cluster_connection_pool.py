@@ -6,12 +6,12 @@ import re
 import time
 from threading import Thread
 
-# rediscluster imports
-from rediscluster.client import RedisCluster
-from rediscluster.connection import (
+# netskoperediscluster imports
+from netskoperediscluster.client import RedisCluster
+from netskoperediscluster.connection import (
     ClusterConnectionPool, ClusterBlockingConnectionPool, ClusterReadOnlyConnectionPool,
     ClusterConnection, UnixDomainSocketConnection)
-from rediscluster.exceptions import RedisClusterException, SlotNotCoveredError
+from netskoperediscluster.exceptions import RedisClusterException, SlotNotCoveredError
 from .conftest import (skip_if_server_version_lt, skip_for_no_cluster_impl)
 
 # 3rd party imports
@@ -211,8 +211,8 @@ class TestConnectionPool(object):
             pool.get_master_node_by_slot(12182)
 
     def test_from_url_connection_classes(self):
-        from rediscluster.client import RedisCluster
-        from rediscluster.connection import ClusterConnectionPool, ClusterConnection, SSLClusterConnection
+        from netskoperediscluster.client import RedisCluster
+        from netskoperediscluster.connection import ClusterConnectionPool, ClusterConnection, SSLClusterConnection
         
         r = RedisCluster.from_url('redis://localhost:7000')
         assert isinstance(r.connection_pool, ClusterConnectionPool)

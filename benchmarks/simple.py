@@ -80,7 +80,7 @@ if __name__ == "__main__":
     startup_nodes = [{"host": args['--host'], "port": args['-p']}]
 
     if not args["--nocluster"]:
-        from rediscluster import RedisCluster
+        from netskoperediscluster import RedisCluster
         rc = RedisCluster(startup_nodes=startup_nodes, max_connections=32, socket_timeout=0.1, decode_responses=True)
     else:
         from redis import Redis

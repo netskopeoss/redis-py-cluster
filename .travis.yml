@@ -42,7 +42,7 @@ env:
 script:
   - make start
   - coverage erase
-  - coverage run --source rediscluster -p -m py.test
+  - coverage run --source netskoperediscluster -p -m py.test
 after_success:
   - coverage combine
   - coveralls

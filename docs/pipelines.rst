@@ -106,7 +106,7 @@ This code does NOT wrap `MULTI/EXEC` around the commands when packed
 
 .. code-block:: python
 
-    >>> from rediscluster import RedisCluster as s
+    >>> from netskoperediscluster import RedisCluster as s
 
     >>> r = s(startup_nodes=[{"host": "127.0.0.1", "port": "7002"}])
 
@@ -132,7 +132,7 @@ This code DO wrap MULTI/EXEC around the commands when packed
 
 .. code-block:: python
 
-    >>> from rediscluster import RedisCluster as s
+    >>> from netskoperediscluster import RedisCluster as s
 
     >>> r = s(startup_nodes=[{"host": "127.0.0.1", "port": "7002"}])
 
