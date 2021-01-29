@@ -123,7 +123,7 @@ An issue has been raised in each repository to have tracking of the problem.
 
 redis-py-cluster: https://github.com/Grokzen/redis-py-cluster/issues/150
 
-netskoperediscluster: https://github.com/salimane/netskoperediscluster-py/issues/11
+rediscluster: https://github.com/salimane/rediscluster-py/issues/11
 
 
 
