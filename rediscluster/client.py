@@ -585,7 +585,7 @@ class RedisCluster(Redis):
         ttl = int(self.RedisClusterRequestTTL)
         connection_error_retry_counter = 0
 
-        Connection = None
+        connection = None
         while ttl > 0:
             ttl -= 1
 
