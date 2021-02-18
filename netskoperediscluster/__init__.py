@@ -4,14 +4,14 @@
 import logging
 import sys
 
-# rediscluster imports
-from rediscluster.client import RedisCluster
-from rediscluster.connection import (
+# netskoperediscluster imports
+from netskoperediscluster.client import RedisCluster
+from netskoperediscluster.connection import (
     ClusterBlockingConnectionPool,
     ClusterConnection,
     ClusterConnectionPool,
 )
-from rediscluster.exceptions import (
+from netskoperediscluster.exceptions import (
     RedisClusterException,
     RedisClusterError,
     ClusterDownException,

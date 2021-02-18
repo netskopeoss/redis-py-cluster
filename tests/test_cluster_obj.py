@@ -5,13 +5,13 @@ from __future__ import with_statement
 import re
 import time
 
-# rediscluster imports
-from rediscluster import RedisCluster
-from rediscluster.connection import ClusterConnectionPool, ClusterReadOnlyConnectionPool
-from rediscluster.exceptions import (
+# netskoperediscluster imports
+from netskoperediscluster import RedisCluster
+from netskoperediscluster.connection import ClusterConnectionPool, ClusterReadOnlyConnectionPool
+from netskoperediscluster.exceptions import (
     RedisClusterException, MovedError, AskError, ClusterDownError,
 )
-from rediscluster.nodemanager import NodeManager
+from netskoperediscluster.nodemanager import NodeManager
 from tests.conftest import _get_client, skip_if_server_version_lt, skip_if_not_password_protected_nodes
 
 # 3rd party imports
@@ -147,7 +147,7 @@ def test_custom_connectionpool():
     assert {"host": host, "port": port} in cluster.connection_pool.nodes.startup_nodes
 
 
-@patch('rediscluster.nodemanager.Redis', new=MagicMock())
+@patch('netskoperediscluster.nodemanager.Redis', new=MagicMock())
 def test_skip_full_coverage_check():
     """
     Test if the cluster_require_full_coverage NodeManager method was not called with the flag activated

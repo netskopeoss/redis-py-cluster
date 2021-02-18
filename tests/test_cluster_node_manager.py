@@ -3,11 +3,11 @@
 # python std lib
 from __future__ import with_statement
 
-# rediscluster imports
+# netskoperediscluster imports
 from tests.conftest import skip_if_server_version_lt
-from rediscluster import RedisCluster
-from rediscluster.exceptions import RedisClusterException, RedisClusterConfigError
-from rediscluster.nodemanager import NodeManager
+from netskoperediscluster import RedisCluster
+from netskoperediscluster.exceptions import RedisClusterException, RedisClusterConfigError
+from netskoperediscluster.nodemanager import NodeManager
 
 # 3rd party imports
 import pytest

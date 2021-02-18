@@ -28,7 +28,7 @@ setup(
     author_email="Grokzen@gmail.com",
     maintainer='Johan Andersson',
     maintainer_email='Grokzen@gmail.com',
-    packages=["rediscluster"],
+    packages=["netskoperediscluster"],
     url='http://github.com/grokzen/redis-py-cluster',
     license='MIT',
     install_requires=[

@@ -5,8 +5,8 @@ from __future__ import unicode_literals
 import threading
 import time
 
-# rediscluster imports
-from rediscluster.client import RedisCluster
+# netskoperediscluster imports
+from netskoperediscluster.client import RedisCluster
 
 # 3rd party imports
 import pytest

@@ -4,10 +4,10 @@
 from __future__ import unicode_literals
 import datetime
 
-# rediscluster imports
-import rediscluster
-from rediscluster.exceptions import RedisClusterException
-from rediscluster.utils import dict_merge
+# netskoperediscluster imports
+import netskoperediscluster
+from netskoperediscluster.exceptions import RedisClusterException
+from netskoperediscluster.utils import dict_merge
 from .conftest import (
     skip_if_server_version_lt,
     skip_if_redis_py_version_lt,
@@ -49,8 +49,8 @@ class TestResponseCallbacksCluster(object):
 
     def test_response_callbacks(self, r):
         all_response_callbacks = dict_merge(
-            rediscluster.RedisCluster.RESPONSE_CALLBACKS,
-            rediscluster.RedisCluster.CLUSTER_COMMANDS_RESPONSE_CALLBACKS,
+            netskoperediscluster.RedisCluster.RESPONSE_CALLBACKS,
+            netskoperediscluster.RedisCluster.CLUSTER_COMMANDS_RESPONSE_CALLBACKS,
         )
 
         assert r.response_callbacks == all_response_callbacks

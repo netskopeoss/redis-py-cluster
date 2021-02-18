@@ -1,7 +1,7 @@
 import pytest
 import time
 
-from rediscluster import RedisCluster
+from netskoperediscluster import RedisCluster
 
 from redis.exceptions import LockError, LockNotOwnedError
 from redis.client import Redis

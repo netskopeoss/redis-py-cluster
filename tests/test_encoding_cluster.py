@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 import pytest
 import redis
 
-from rediscluster import RedisCluster
+from netskoperediscluster import RedisCluster
 
 from redis._compat import unichr, unicode
 from .conftest import _get_client, _init_client

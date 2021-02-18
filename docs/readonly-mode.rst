@@ -7,7 +7,7 @@ redis-py-cluster also implements this mode. You can access slave by passing `rea
 
 .. code-block:: python
 
-    >>> from rediscluster import RedisCluster
+    >>> from netskoperediscluster import RedisCluster
     >>> startup_nodes = [{"host": "127.0.0.1", "port": "7000"}]
     >>> rc = RedisCluster(startup_nodes=startup_nodes, decode_responses=True)
     >>> rc.set("foo16706", "bar")

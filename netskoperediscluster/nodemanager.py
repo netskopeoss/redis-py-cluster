@@ -6,7 +6,7 @@ import logging
 import random
 import socket
 
-# rediscluster imports
+# netskoperediscluster imports
 from .crc import crc16
 from .exceptions import RedisClusterException, RedisClusterConfigError
 

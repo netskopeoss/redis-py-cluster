@@ -16,7 +16,7 @@ Release Notes
       and much faster to update and keep them in sync over time going into the future (#368)
     * Python 3.5.x or higher is now required if running on a python 3 version
     * Removed the monkeypatching of RedisCluster, ClusterPubSub & ClusterPipeline class names into the "redis" python package namespace during runtime.
-      They are now exposed in the "rediscluster" namespace to mimic the same feature from redis-py
+      They are now exposed in the "netskoperediscluster" namespace to mimic the same feature from redis-py
     * cluster_down_retry_attempts can now be configured to any value when creating RedisCluster instance
     * Creating RedisCluster from unix socket url:s has been disabled
     * Patch the from_url method to use the corret cluster version of the same Connection class

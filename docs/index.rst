@@ -37,7 +37,7 @@ Additional code examples of more advance functionality can be found in the `exam
 
 .. code-block:: python
 
-    >>> from rediscluster import RedisCluster
+    >>> from netskoperediscluster import RedisCluster
 
     >>> # Requires at least one node for cluster discovery. Multiple nodes is recommended.
     >>> startup_nodes = [{"host": "127.0.0.1", "port": "7000"}]
@@ -108,7 +108,7 @@ version and will require Python 3.5+.
 Regarding duplicate package name on pypi
 ----------------------------------------
 
-It has been found that the python module name that is used in this library (rediscluster) is already shared with a similar but older project.
+It has been found that the python module name that is used in this library (netskoperediscluster) is already shared with a similar but older project.
 
 This lib will `NOT` change the naming of the module to something else to prevent collisions between the libs.
 

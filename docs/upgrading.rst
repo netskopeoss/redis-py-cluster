@@ -11,7 +11,7 @@ Python3 version must now be one of 3.5, 3.6, 3.7, 3.8
 The following exception example has now a new more specific exception class that will be attempted to be caught and the client to resolve the cluster layout. If enough attempts has been made then SlotNotCoveredError will be raised with the same message as before. If you have catch for RedisClusterException you either remove it and let the client try to resolve the cluster layout itself, or start to catch SlotNotCoveredError. This error usually happens during failover if you run skip_full_coverage_check=True when running on AWS ElasticCache for example.
 
 	## Example exception
-	rediscluster.exceptions.RedisClusterException: Slot "6986" not covered by the cluster. "skip_full_coverage_check=True"
+	netskoperediscluster.exceptions.RedisClusterException: Slot "6986" not covered by the cluster. "skip_full_coverage_check=True"
 
 
 1.3.x --> 2.0.0
@@ -57,14 +57,14 @@ Class RedisClusterMgt has been removed. You should use the `CLUSTER ...` methods
 
 Method `cluster_delslots` changed argument specification from `self, node_id, *slots` to `self, *slots` and changed the behaviour of the method to now automatically determine the slot_id based on the current cluster structure and where each slot that you want to delete is loaded.
 
-Method pfcount no longer has custom logic and exceptions to prevent CROSSSLOT errors. If method is used with different slots then a regular CROSSSLOT error (rediscluster.exceptions.ClusterCrossSlotError) will be returned.
+Method pfcount no longer has custom logic and exceptions to prevent CROSSSLOT errors. If method is used with different slots then a regular CROSSSLOT error (netskoperediscluster.exceptions.ClusterCrossSlotError) will be returned.
 
 
 
 1.1.0 --> 1.2.0
 --------------
 
-Discontinue passing `pipeline_use_threads` flag to `rediscluster.StrictRedisCluster` or `rediscluster.RedisCluster`.
+Discontinue passing `pipeline_use_threads` flag to `netskoperediscluster.StrictRedisCluster` or `netskoperediscluster.RedisCluster`.
 
 Also discontinue passing `use_threads` flag to the pipeline() method.
 

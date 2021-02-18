@@ -2,7 +2,7 @@
 from socket import gethostbyaddr
 from functools import wraps
 
-# rediscluster imports
+# netskoperediscluster imports
 from .exceptions import (
     RedisClusterException, ClusterDownError
 )

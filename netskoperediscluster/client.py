@@ -9,7 +9,7 @@ import random
 import string
 import time
 
-# rediscluster imports
+# netskoperediscluster imports
 from .connection import (
     ClusterConnection,
     ClusterConnectionPool,
@@ -1393,4 +1393,4 @@ class RedisCluster(Redis):
         return ''.join(random.choice(chars) for _ in range(size))
 
 
-from rediscluster.pipeline import ClusterPipeline
+from netskoperediscluster.pipeline import ClusterPipeline

@@ -49,7 +49,7 @@ This major version of `redis-py-cluster` supports `redis-py >=3.0.0, <4.0.0`.
 Small sample script that shows how to get started with RedisCluster. It can also be found in [examples/basic.py](examples/basic.py)
 
 ```python
->>> from rediscluster import RedisCluster
+>>> from netskoperediscluster import RedisCluster
 
 >>> # Requires at least one node for cluster discovery. Multiple nodes is recommended.
 >>> startup_nodes = [{"host": "127.0.0.1", "port": "7000"}]

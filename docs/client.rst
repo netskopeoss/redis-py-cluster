@@ -54,7 +54,7 @@ Example scripts:
 
 .. code-block:: python
 
-    from rediscluster import RedisCluster
+    from netskoperediscluster import RedisCluster
 
     startup_nodes = [{"host": "127.0.0.1", "port": "7000"}]
 
@@ -88,7 +88,7 @@ This feature is also useful in cases such as when one is trying to access AWS El
 
 .. code-block:: python
 
-    from rediscluster import RedisCluster
+    from netskoperediscluster import RedisCluster
 
     startup_nodes = [
         {"host": "127.0.0.1", "port": "17000"},
